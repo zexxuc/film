@@ -1,0 +1,55 @@
+:root {
+  --bg:#0b0f14; --card:#0f1720; --muted:#9aa6b2; --accent:#ff6b6b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:Inter, Arial, sans-serif;
+  background:var(--bg);
+  color:#e6eef6;
+}
+.wrap {max-width:1200px; margin:auto; padding:20px;}
+header {
+  display:flex; gap:16px; align-items:center; margin-bottom:18px;
+}
+.logo {font-weight:700; font-size:22px; color:var(--accent);}
+.toolbar {margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;}
+.search, select, button {
+  background:#101823; border:1px solid #1d2733; color:inherit;
+  padding:8px 12px; border-radius:8px;
+}
+.grid {
+  display:grid; gap:14px;
+  grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+}
+.card {
+  background:#111a25; border-radius:10px; overflow:hidden;
+  cursor:pointer; transition:.15s;
+}
+.card:hover {transform:translateY(-4px);}
+.poster {width:100%; height:240px; object-fit:cover;}
+.meta {padding:10px;}
+.title {font-weight:600; margin-bottom:4px;}
+.sub {font-size:12px; color:var(--muted);}
+.footer-controls {display:flex; justify-content:center; gap:8px; margin:20px 0;}
+.empty {display:none; text-align:center; color:var(--muted); margin-top:20px;}
+.modal-backdrop {
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,0.7); align-items:center; justify-content:center;
+}
+.modal {
+  background:#061016; border-radius:12px; max-width:900px; width:95%;
+  color:#dfe9f4; overflow:hidden;
+}
+.modal-header {display:flex; justify-content:flex-end; padding:8px;}
+.close-x {background:transparent; border:0; color:var(--muted); font-size:18px; cursor:pointer;}
+.modal-inner {display:flex; gap:16px; padding:18px;}
+.modal-poster {width:260px; height:380px; object-fit:cover; border-radius:8px;}
+.modal-info {flex:1;}
+.player-mock {
+  background:#000; color:#ccc; text-align:center; padding:20px;
+  border-radius:8px; margin-top:12px;
+}
+@media (max-width:720px) {
+  .modal-inner {flex-direction:column; align-items:center;}
+  .modal-poster {width:60%; height:auto;}
+}

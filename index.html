@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniFlix — онлайн-фильмы TMDB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">MiniFlix</div>
+      <div class="toolbar">
+        <input id="search" class="search" placeholder="Поиск фильмов..." />
+        <select id="sort">
+          <option value="popular">Популярные</option>
+          <option value="top_rated">Лучшие</option>
+          <option value="now_playing">В кино</option>
+          <option value="upcoming">Скоро</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section id="catalog" class="grid"></section>
+      <div class="footer-controls">
+        <button id="prev" class="btn">← Назад</button>
+        <div id="pageLabel"></div>
+        <button id="next" class="btn">Вперёд →</button>
+      </div>
+      <div id="empty" class="empty">Ничего не найдено.</div>
+    </main>
+  </div>
+
+  <div id="backdrop" class="modal-backdrop">
+    <div class="modal">
+      <div class="modal-header">
+        <button id="closeModal" class="close-x">✕</button>
+      </div>
+      <div class="modal-inner">
+        <img id="modalPoster" class="modal-poster" src="" alt="">
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <div id="modalMeta"></div>
+          <p id="modalSummary"></p>
+          <div class="player-mock">
+             <a href="https://kinogo.online/filmy/5990-zelenyj-slonik.html" target="_blank" class="player-link">
+                <strong>Смотреть</strong>
+             </a>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
